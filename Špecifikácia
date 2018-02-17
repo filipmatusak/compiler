@@ -1,0 +1,105 @@
+Špecifikácia
+
+Dátove typy: Int, Float, Bool, Char, String, n rozmenrné polia predchádzajúcich typov.
+
+Na konci príkazu je bodkočiarka.
+
+Alokácia premennej
+
+var: <meno>: <typ>;
+var: <meno>: <typ> (= <výraz>);		// typ nesmie byť pole
+
+Alokácia poľa
+
+var: <meno>[<výraz>][<výraz>];
+Pozor, pole sa posiela len referenciou.
+
+Písať a čítať z poľa môžeme len primitívne typy, nie menšie polia.
+
+Priradenie
+
+<meno> = <výraz>;
+
+For cykly
+
+for(<premenná> <- <výraz> to <výraz> by <výraz>) { ... }
+for(<premenná> <- <výraz> to <výraz>) { ... }
+for(<premenná> <- <výraz> to <výraz>, <premenná> <- <výraz> to <výraz>) { ... }
+
+Indexovať je možné len pomocou Int typov.
+
+Podmienky
+
+if <podmenienka> -> { ... }
+if <podmenienka> -> { ... } else -> { ... }
+if <podmenienka> -> { ... } else if <podmienka> -> { ... }
+if <podmenienka> -> { ... } else if <podmienka> -> { ... } else...
+
+Definícia funkcie
+
+def <meno> <parameter>,<parameter>: <typ>, <parameter>,<parameter>: <typ> -> <navratovy typ> = { ... }
+
+Príkaz "return <výraz>;" musí byť aspoň na konci funkcie.
+V programe musí byť definovaná funkcia main -> Int, ktorá sa zavolá pri spustení programu.
+
+
+Volanie funkcie
+
+<meno>(<argument>, <argument>, <argument>);
+
+Výrazy
+
+Pre číselné výrazy
+a + b
+a - b
+a * b
+a / b
+-a 
+
+Pre Int, Bool a Char
+a & b
+a | b
+a ^ b
+
+Porovnania pre všetky typy, okrem polí
+a == b
+a != b
+a > b
+a >= b
+a < b
+a <= b
+
+Bool výrazy
+a && b
+a || b
+
+Tieto operácie sa dajú použiť len na výrazy rovnakého typu a výsledkom je rovnaký typ, pri porovnaniach je výsledok Bool.
+Dajú sa použiť aj zátvorky.
+
+Príklad 
+
+var b: Bool = 1.5 * 9.1 > 2.0 && "acx" != "ecx" && ( 5*7 - 2^5 == 28 || false);
+
+Preddefinované funkcie
+
+readInt(), readFloat(), readChar(), readString()
+printi, printiln pre Int
+printd, printdln pre Float
+printb, printbln pre Bool
+printc, printcln pre Char
+prints, printsln pre String
+
+
+Literály
+
+Int - cifra+
+Float - cifra+.cifra+
+Bool - true | false
+Char - 'x'
+String - "text"
+
+
+Názvy funkcií musia byť rôzne.
+Premenná nemôže mať meno ako funkcia.
+Premenné vo funkcii musia mať rôzne mená.
+
