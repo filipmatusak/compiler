@@ -7,7 +7,9 @@ See examples/
 ## Build compiler
 
 mvn dependency:resolve
+
 mvn scala:compile
+
 mvn package
 
 This creates target/compiler.jar
@@ -15,6 +17,7 @@ This creates target/compiler.jar
 ## Using compiler
 
 java -jar compiler.jar main.x main.ll
+
 llvm-as main.ll
 
 ## Run
