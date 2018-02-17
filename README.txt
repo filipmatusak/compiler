@@ -1,18 +1,22 @@
-Kompilácia 
+# Compiler for simple scala-like language using llvm
 
-Build kompilátora: 
+This projec was created for course Compilers on Comenius University in 2017.
+
+See examples/
+
+## Build compiler
 
 mvn dependency:resolve
 mvn scala:compile
 mvn package
 
-vytvorí sa target/compiler.jar
+This creates target/compiler.jar
 
-Použitie kompilátora
+## Using compiler
 
 java -jar compiler.jar main.x main.ll
 llvm-as main.ll
 
-Spustenie programu
+## Run
 
 lli -load=./library.so main.bc
